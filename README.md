@@ -22,7 +22,7 @@ Open airflow.cfg file in the config folder and change following values:
 ```
 $ docker-compose up -d
 ```  
-SSH into your Airflow webserver container to create admin user (docker exec -it docker-airflow_webserver_1 bash):
+SSH into your Airflow webserver container to create admin user (docker exec -it huhta-airflow_webserver_1 bash):
 
 ```
 $ airflow users create -e <email> -f <firstname> -l <lastname> -r <role> -u <username>
