@@ -1,8 +1,8 @@
-# VERSION 2.0.0
+# VERSION 2.0
 # AUTHOR: Lauri Huhta
 # DESCRIPTION: Basic Airflow container
-# BUILD: docker build --rm -t puckel/docker-airflow .
-# SOURCE: https://github.com/Itzblend/Huhta-Airflow
+# BUILD: docker build --rm -t itzblend/huhta-airflow .
+# SOURCE: https://github.com/Itzblend/huhta-airflow
 
 FROM python:3.7-slim-buster
 LABEL maintainer="Huhta"
@@ -25,8 +25,6 @@ ENV LC_ALL en_US.UTF-8
 ENV LC_CTYPE en_US.UTF-8
 ENV LC_MESSAGES en_US.UTF-8
 
-# Disable noisy "Handling signal" log messages:
-# ENV GUNICORN_CMD_ARGS --log-level WARNING
 
 RUN set -ex \
     && buildDeps=' \
