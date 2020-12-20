@@ -1,6 +1,7 @@
 # MYYYY
 
-[![CI status](https://github.com/Itzblend/huhta-airflow/workflows/CI/badge.svg?branch=master)](https://github.com/Itzblend/huhta-airflow/actions?query=workflow%3ACI+branch%3Amaster+event%3Apush)
+![CI status](https://github.com/Itzblend/huhta-airflow/workflows/CI/badge.svg?branch=main)
+
 
 ## Getting started
 
