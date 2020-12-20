@@ -16,4 +16,5 @@ jobs:
       - run: docker build -t "${PWD##*/}" .
       - run: docker run "${PWD##*/}" python -V
       - run: docker run "${PWD##*/}" version
+      - run: docker image ls
 
