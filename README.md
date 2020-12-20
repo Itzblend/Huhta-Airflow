@@ -1,5 +1,7 @@
 # MYYYY
 
+[![CI status](https://github.com/Itzblend/huhta-airflow/workflows/CI/badge.svg?branch=master)](https://github.com/Itzblend/huhta-airflow/actions?query=workflow%3ACI+branch%3Amaster+event%3Apush)
+
 ## Getting started
 
 Open airflow.cfg file in the config folder and change following values:
