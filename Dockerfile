@@ -1,8 +1,8 @@
 # VERSION 2.0.0
 # AUTHOR: Lauri Huhta
 # DESCRIPTION: Basic Airflow container
-# BUILD: docker build --rm -t puckel/docker-airflow .
-# SOURCE: https://github.com/Itzblend/Huhta-Airflow
+# BUILD: docker build --rm -t itzblend/docker-airflow .
+# SOURCE: https://github.com/Itzblend/huhta-airflow
 
 FROM python:3.7-slim-buster
 LABEL maintainer="Huhta"
@@ -60,7 +60,6 @@ RUN set -ex \
     && pip install ndg-httpsclient \
     && pip install pyasn1 \
     && pip install apache-airflow[crypto,celery,postgres,hive,jdbc,aws,kubernetes,mysql,ssh${AIRFLOW_DEPS:+,}${AIRFLOW_DEPS}]==${AIRFLOW_VERSION} \
-
     && pip install 'redis==3.2' \
     && if [ -n "${PYTHON_DEPS}" ]; then pip install ${PYTHON_DEPS}; fi \
     && apt-get purge --auto-remove -yqq $buildDeps \

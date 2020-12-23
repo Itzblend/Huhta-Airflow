@@ -10,6 +10,8 @@ services:
             options:
                 max-size: 10m
                 max-file: "3"
+        volumes:
+          - airflow_pg:/var/lib/postgresql/data/
 
     webserver:
         image: itzblend/huhta-airflow
@@ -34,3 +36,7 @@ services:
             interval: 30s
             timeout: 30s
             retries: 3
+
+
+volumes:
+  airflow_pg:
