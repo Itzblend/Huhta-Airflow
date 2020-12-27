@@ -14,7 +14,8 @@ services:
           - airflow_pg:/var/lib/postgresql/data/
 
     webserver:
-        image: itzblend/huhta-airflow
+        #image: itzblend/huhta-airflow
+        image: huhta-airflow
         restart: always
         depends_on:
             - postgres
