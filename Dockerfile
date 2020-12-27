@@ -74,6 +74,8 @@ RUN set -ex \
         /usr/share/doc \
         /usr/share/doc-base
 
+RUN apt-get update && apt-get install git -yqq
+
 COPY script/entrypoint.sh /entrypoint.sh
 COPY config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
 
