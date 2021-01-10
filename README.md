@@ -22,6 +22,24 @@ Open airflow.cfg file in the config folder and change the secret key with random
 secret_key = <your-secret-key>
 ```
 
+#### Generate a fernet encryption key for stored variables
+```
+pip install cryptography
+```
+
+```
+$ python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+# This will print out a fernet key that you need to set as a environment variable in the docker-compose file
+```
+
+In docker-compose file fill in the fernet key
+```
+environment:
+    - LOAD_EX=n
+    - EXECUTOR=Local
+    - AIRFLOW__CORE__FERNET_KEY=''
+```
+
 #### Run the containers
 ```
 $ docker-compose up -d
